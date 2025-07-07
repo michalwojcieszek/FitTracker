@@ -1,8 +1,8 @@
 import { Montserrat } from "next/font/google";
 import MuiProvider from "./theme/MuiProvider";
-import Navbar from "./components/PageStructure/Navbar";
-import Footer from "./components/PageStructure/Footer";
-import Main from "./components/PageStructure/Main";
+import Navbar from "@/components/PageStructure/Navbar";
+import Footer from "@/components/PageStructure/Footer";
+import Main from "@/components/PageStructure/Main";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
