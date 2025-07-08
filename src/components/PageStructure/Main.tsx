@@ -7,11 +7,14 @@ const Main = ({ children }: { children: ReactNode }) => {
     <Box
       display="flex"
       flexDirection="column"
-      minHeight="80vh"
-      bgcolor="grey.200">
+      bgcolor="grey.200"
+      maxHeight="100vh"
+      flexGrow={1}
+      justifyContent="center"
+      alignItems="center"
+      py={3}>
       <Box
         component="main"
-        flexGrow={1}
         display="flex"
         justifyContent="center"
         alignItems="center">

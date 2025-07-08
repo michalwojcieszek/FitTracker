@@ -1,17 +1,8 @@
 "use client";
-import {
-  Card,
-  CardContent,
-  Typography,
-  Grid,
-  Box,
-  Divider,
-  IconButton,
-  Stack,
-  Paper,
-} from "@mui/material";
+import { Grid } from "@mui/material";
 import { useMetricsStore } from "@/stores/metricsStore";
 import StatsCard from "./SingleStats/StatsCard";
+import StatsInfoBox from "./StatsInfoBox";
 
 const Stats = () => {
   const { metrics } = useMetricsStore();
@@ -48,6 +39,7 @@ const Stats = () => {
     <Grid
       container
       spacing={3}>
+      <StatsInfoBox />
       {sampleMetrics.map((singleMetrics, index) => (
         <StatsCard
           {...singleMetrics}

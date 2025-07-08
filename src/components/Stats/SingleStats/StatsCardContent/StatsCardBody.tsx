@@ -1,10 +1,9 @@
 "use client";
-
 import { Grid } from "@mui/material";
 import Weight from "./BodyContent/Weight";
-import StatsList from "./BodyContent/StatsList";
 import BmiStats from "./BodyContent/BmiStats";
 import { MetricsSchema } from "@/schemas/metricsSchema";
+import StatsDetails from "./BodyContent/StatsDetails";
 
 type StatsCardBodyProps = {
   metrics: MetricsSchema;
@@ -19,7 +18,7 @@ const StatsCardBody = ({ metrics, height }: StatsCardBodyProps) => {
       container
       spacing={2}>
       <Weight {...{ weight }} />
-      <StatsList {...{ metrics }} />
+      <StatsDetails {...{ metrics }} />
       <BmiStats {...{ height, weight }} />
     </Grid>
   );

@@ -2,7 +2,7 @@
 import { calculateBMI } from "@/helpers/calcBmi";
 import { getHealthStatus } from "@/helpers/getHealthStatus";
 import { Box, Typography } from "@mui/material";
-import Grid from "@mui/material/Grid";
+import { Grid } from "@mui/material";
 import React from "react";
 
 type BmiStatsProps = {

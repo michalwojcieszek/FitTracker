@@ -1,7 +1,8 @@
 "use client";
-import { Button, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 import { ReactNode } from "react";
 import { FieldValues, FormProvider, UseFormReturn } from "react-hook-form";
+import CustomButton from "../../Buttons/CustomButton";
 
 type FormWrapperProps<T extends FieldValues> = {
   buttonText: string;
@@ -21,12 +22,7 @@ const FormWrapper = <T extends FieldValues>({
       <form onSubmit={methods.handleSubmit(onSubmit)}>
         <Stack spacing={2}>
           {children}
-          <Button
-            type="submit"
-            variant="contained"
-            sx={{ color: "white", textTransform: "none" }}>
-            {buttonText}
-          </Button>
+          <CustomButton type="submit">{buttonText}</CustomButton>
         </Stack>
       </form>
     </FormProvider>

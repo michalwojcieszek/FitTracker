@@ -1,6 +1,6 @@
 "use  client";
-import AuthForm from "../Auth/AuthForm";
 import CustomCard from "../UI/Cards/CustomCard";
+import SignupForm from "./SignupForm";
 
 const Signup = () => {
   const onSubmit = (data: any) => {
@@ -10,7 +10,7 @@ const Signup = () => {
     <CustomCard
       title="Sign Up"
       subtitle="Create an account to track your progress">
-      <AuthForm
+      <SignupForm
         buttonText="Sign Up"
         onSubmit={onSubmit}
       />

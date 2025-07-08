@@ -1,31 +1,41 @@
 "use client";
-import { Card, CardContent, Typography } from "@mui/material";
+import { Card, CardContent, CardProps, Typography } from "@mui/material";
 import { ReactNode } from "react";
 
-interface CustomCardProps {
+type CustomCardProps = {
   children: ReactNode;
-  title: string;
-  subtitle: string;
-}
+  title?: string;
+  subtitle?: string;
+} & CardProps;
 
-const CustomCard = ({ children, title, subtitle }: CustomCardProps) => {
+const CustomCard = ({
+  children,
+  title,
+  subtitle,
+  ...props
+}: CustomCardProps) => {
   return (
     <Card
-      sx={{ padding: 5, borderRadius: 3 }}
-      elevation={6}>
+      elevation={6}
+      sx={{ borderRadius: 3, width: "100%", p: 3 }}
+      {...props}>
       <CardContent>
-        <Typography
-          variant="h3"
-          color="primary"
-          fontWeight={700}
-          pb={1}>
-          {title}
-        </Typography>
-        <Typography
-          pb={4}
-          fontWeight={700}>
-          {subtitle}
-        </Typography>
+        {title && (
+          <Typography
+            variant="h3"
+            color="primary"
+            fontWeight={700}
+            pb={1}>
+            {title}
+          </Typography>
+        )}
+        {subtitle && (
+          <Typography
+            pb={4}
+            fontWeight={700}>
+            {subtitle}
+          </Typography>
+        )}
         {children}
       </CardContent>
     </Card>
